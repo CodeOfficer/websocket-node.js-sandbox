@@ -4,10 +4,20 @@
 
 // ------------------------------------------------------
 
-	log.info('global: ' + global);
-	log.info('module: ' + module);
-	log.info('process: ' + process);
-	log.info('require.paths: ' + require.paths);
-	log.info('__filename: ' + __filename);
-	log.info('__dirname: ' + __dirname);
-	
+	log.info('global:');
+	log.inspect(global);
+
+	log.info('module:');
+	log.inspect(module);
+
+	log.info('process:');
+	log.inspect(process);
+
+	log.info('require.paths:');
+	log.inspect(require.paths);
+
+	log.info('__dirname:');
+	log.inspect(__dirname);
+
+	log.info('__filename:');
+	log.inspect(__filename);

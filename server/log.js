@@ -19,10 +19,8 @@ this.level = this.WARN;
 
 var self = this;
 
-this.showProps = function(obj, objName) {
-	for (var i in obj) {
-		self.log(this.INFO, objName + "." + i + " = " + obj[i] + "\n");
-	};
+this.inspect = function(obj) {
+	self.log(this.INFO, sys.inspect(obj));
 };
 
 this.debug = function(message) {
