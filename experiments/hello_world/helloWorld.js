@@ -1,5 +1,5 @@
 // ------------------------------------------------------
-	var log = require('./log');
+	var log = require('../../server/log');
 	log.level = log.DEBUG;
 
 // ------------------------------------------------------
@@ -10,6 +10,6 @@
 		response.writeHeader(200, {"Content-Type": "text/plain"});
 		response.write("Hello World\n");
 		response.close();
-		log.debug('REQUEST');
+		log.debug('****************** request served');
 	}).listen(8000);
 	log.info('Server running at http://127.0.0.1:8000/');
