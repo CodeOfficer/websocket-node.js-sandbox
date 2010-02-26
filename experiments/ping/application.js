@@ -43,7 +43,7 @@ var NodeSocket = {
 
 NodeSocket.handlers = {
   pong: function(data) {
-		$("#mark").animate({"left": data.pageX, "top": data.pageY}, "fast");
+		$("#mark").stop(true, true).animate({"left": data.pageX, "top": data.pageY}, "fast");
   }
 };
 

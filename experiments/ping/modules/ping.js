@@ -10,9 +10,10 @@ var Module = this.Module = function(data, connection){
   };
 
   this.broadcast = function(fn) {
+		var data = fn(connection);
+		var str = 'pageX:' + data[1].pageX + ' pageY:' + data[1].pageY;
+		logger.store('[broadcast] DATA: ' + str);
 		this.server.chatConnections.forEach(function(connection) {
-			var data = fn(connection);
-			logger.store('[broadcast] DATA: ' + data);
 			connection.send(JSON.stringify(data));
 		});
   };
